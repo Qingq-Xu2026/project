@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vit-yolo-reproduction"
+version = "0.1.0"
+description = "PyTorch architecture reproduction of ViT-YOLO (ICCVW 2021)"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.21,<2",
+    "Pillow>=9.0",
+]
+
+[project.optional-dependencies]
+evaluate = [
+    "pycocotools>=2.0",
+    "matplotlib>=3.7",
+]
+
+[tool.setuptools.packages.find]
+include = ["vit_yolo*"]
